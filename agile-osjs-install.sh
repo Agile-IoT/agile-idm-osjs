@@ -1,12 +1,12 @@
 #git clone https://github.com/doitdagi/OS.js
-cd OS.js
-git checkout 3e9a9e4dcd72e8b4cc666e57e0088c675c449062
+#cd OS.js
+#git checkout 3e9a9e4dcd72e8b4cc666e57e0088c675c449062
 #npm install
 #npm install --production
 grunt create-handler:Agile
 #put handlers!
-cp ../src/client/javascript/handlers/agile/handler.js  ./src/client/javascript/handlers/agile/handler.js
-cp ../src/server/node/handlers/agile/handler.js ./src/server/node/handlers/agile/handler.js
+cp $1/src/client/javascript/handlers/agile/handler.js  ./src/client/javascript/handlers/agile/handler.js
+cp $1/src/server/node/handlers/agile/handler.js ./src/server/node/handlers/agile/handler.js
 #set agile handler
 grunt config --set=handler --value=agile
 #Configure AGILE IDM part
