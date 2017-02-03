@@ -11,7 +11,7 @@ cp $1/src/server/node/handlers/agile/handler.js ./src/server/node/handlers/agile
 grunt config --set=handler --value=agile
 #Configure AGILE IDM part
 # In order for authentication to work, OSjs needs to be a valid client registered with a url equal to the url of the OS js interface registered in AGILE IDM
-grunt config --set=server.handlers.agile.idm --value=http://agile-idm.local:3000/oauth2/api/userinfo
+grunt config --set=server.handlers.agile.idm --value=http://agile-idm:3000/oauth2/api/userinfo
 grunt config -set=client.Connection.RedirectIDM --value=http://agilegw.local:3000/oauth2/dialog/authorize/
 #grunt config -set=client.Oauth2.id --value=OSjs
 grunt config -set=client.Oauth2.id --value=AGILE-OSJS
