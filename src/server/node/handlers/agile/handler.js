@@ -71,7 +71,6 @@
    */
   var API = {
     login: function(server, args, callback) {
-      console.log('tokenLocation: '+tokenFile.toString());
       var auth = profileFromIDM(idmUrl, args.password, function(error, data){
         if(error){
           console.log('auth wrong '+error);
@@ -80,21 +79,15 @@
         }
         else{
           console.log('ok.. token is here!'+JSON.stringify(data));
-          var fs = require('fs');
-          fs.writeFile(tokenFile.toString(), data.token, function(err) {
-            if(err) {
-              return callback(err.toString());
+          server.handler.onLogin(server, {
+            userSettings: {},
+            userData: {
+              id: data.id,
+              username: data.user_name,
+              name: data.user_name,
+              groups: ['admin']
             }
-            server.handler.onLogin(server, {
-              userSettings: {},
-              userData: {
-                id: data.id,
-                username: data.user_name,
-                name: data.user_name,
-                groups: ['admin']
-              }
-            }, callback);
-           });
+          }, callback);
         }
       });
     },
