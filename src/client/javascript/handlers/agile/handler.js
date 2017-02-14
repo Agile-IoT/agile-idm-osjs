@@ -70,6 +70,7 @@
              var token = getQueryVariable(hash, "access_token");
              var type = getQueryVariable(hash, "token_type");
              if(token && type){
+               localStorage.setItem("agile_token",token);
                document.getElementById('LoginUsername').value= "";
                document.getElementById('LoginPassword').value= token;
                document.getElementById("LoginSubmit").click();
