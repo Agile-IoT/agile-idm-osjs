@@ -72,7 +72,7 @@
   var API = {
     login: function(server, args, callback) {
       var auth = profileFromIDM(idmUrl, args.password, function(error, data){
-        if(error){
+        if(error || !data){
           console.log('auth wrong '+error);
           callback('wrong agile user');
           return;
