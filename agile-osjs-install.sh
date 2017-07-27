@@ -1,3 +1,13 @@
+#-------------------------------------------------------------------------------
+# Copyright (C) 2017 UNI Passau
+# All rights reserved. This program and the accompanying materials
+# are made available under the terms of the Eclipse Public License v1.0
+# which accompanies this distribution, and is available at
+# http://www.eclipse.org/legal/epl-v10.html
+# 
+# Contributors:
+#     UNI Passau - initial API and implementation
+#-------------------------------------------------------------------------------
 #git clone https://github.com/doitdagi/OS.js
 #cd OS.js
 #git checkout 3e9a9e4dcd72e8b4cc666e57e0088c675c449062
